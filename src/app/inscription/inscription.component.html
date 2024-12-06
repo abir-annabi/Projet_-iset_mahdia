@@ -1,0 +1,45 @@
+<h2>Inscription</h2>
+<form [formGroup]="inscriptionForm" (ngSubmit)="validateForm()">
+  <label for="name">Nom :</label>
+  <input 
+    id="name" 
+    formControlName="name" 
+    [ngClass]="{
+      'valid': inscriptionForm.get('name')?.valid && inscriptionForm.get('name')?.touched,
+      'invalid': inscriptionForm.get('name')?.invalid && inscriptionForm.get('name')?.touched
+    }" />
+  <div *ngIf="inscriptionForm.get('name')?.touched && inscriptionForm.get('name')?.invalid" class="error">
+    <div *ngIf="inscriptionForm.get('name')?.hasError('required')">Le nom est requis.</div>
+    <div *ngIf="inscriptionForm.get('name')?.hasError('pattern')">Le nom doit contenir uniquement des lettres.</div>
+  </div><br />
+
+  <label for="surname">Prénom :</label>
+  <input 
+    id="surname" 
+    formControlName="surname" 
+    [ngClass]="{
+      'valid': inscriptionForm.get('surname')?.valid && inscriptionForm.get('surname')?.touched,
+      'invalid': inscriptionForm.get('surname')?.invalid && inscriptionForm.get('surname')?.touched
+    }" />
+  <div *ngIf="inscriptionForm.get('surname')?.touched && inscriptionForm.get('surname')?.invalid" class="error">
+    <div *ngIf="inscriptionForm.get('surname')?.hasError('required')">Le prénom est requis.</div>
+    <div *ngIf="inscriptionForm.get('surname')?.hasError('pattern')">Le prénom doit contenir uniquement des lettres.</div>
+  </div><br />
+
+  <label for="password">Mot de passe :</label>
+  <input 
+    id="password" 
+    type="password" 
+    formControlName="password" 
+    [ngClass]="{
+      'valid': inscriptionForm.get('password')?.valid && inscriptionForm.get('password')?.touched,
+      'invalid': inscriptionForm.get('password')?.invalid && inscriptionForm.get('password')?.touched
+    }" />
+  <div *ngIf="inscriptionForm.get('password')?.touched && inscriptionForm.get('password')?.invalid" class="error">
+    <div *ngIf="inscriptionForm.get('password')?.hasError('required')">Le mot de passe est requis.</div>
+    <div *ngIf="inscriptionForm.get('password')?.hasError('minlength')">Le mot de passe doit contenir au moins 8 caractères.</div>
+    <div *ngIf="inscriptionForm.get('password')?.hasError('pattern')">Le mot de passe doit contenir au moins 1 majuscule, 1 minuscule et 1 chiffre.</div>
+  </div><br />
+
+  <button class="button-valider" type="submit" [disabled]="inscriptionForm.invalid">Valider</button>
+</form>

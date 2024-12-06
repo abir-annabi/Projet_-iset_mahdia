@@ -1,0 +1,104 @@
+/* Mode clair (par défaut) */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.light-theme nav a {
+    color: #000000;
+  }
+  
+  body.light-theme .theme-toggle {
+    background-color: #f0f0f0;
+    color: #000000;
+  }
+  
+  /* Mode sombre */
+  body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-theme nav a {
+    color: #ffffff;
+  }
+  
+  body.dark-theme .theme-toggle {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  /* Optionnel: Ajouter un style pour les liens actifs */
+  a.active {
+    font-weight: bold;
+    color: #ff6347; /* Par exemple, une couleur différente */
+  }
+  
+  /* Style de la barre de navigation */
+  nav {
+    background-color: #003366; /* Bleu foncé pour la barre de navigation */
+    padding: 10px 20px; /* Espacement à l'intérieur de la barre */
+    display: flex; /* Utilisation du Flexbox pour aligner les éléments horizontalement */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce sous la barre */
+  }
+  
+  /* Style des liens dans la navigation */
+  nav a {
+    color: white; /* Texte blanc pour les liens */
+    font-size: 18px; /* Taille de texte confortable */
+    margin: 0 15px; /* Espacement entre les liens */
+    text-decoration: none; /* Enlever la décoration par défaut */
+    padding: 8px 12px; /* Espacement interne autour du texte */
+    border-radius: 4px; /* Coins arrondis pour un look plus doux */
+    transition: all 0.3s ease; /* Transition fluide pour tous les effets */
+  }
+  
+  /* Style pour les liens au survol */
+  nav a:hover {
+    background-color: #1E90FF; /* Bleu vif pour le fond au survol */
+    color: white; /* Texte restant blanc */
+    text-decoration: none; /* Pas de soulignement au survol */
+  }
+  
+  /* Style pour le lien actif */
+  nav a.active {
+    background-color: #FFD700; /* Couleur dorée pour l'élément actif */
+    color: #003366; /* Texte bleu foncé pour l'élément actif */
+    font-weight: bold; /* Met en gras le texte de l'élément actif */
+  }
+  
+  /* Réactivité : lorsque la fenêtre est petite, la barre devient flexible */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Empile les liens verticalement sur les petits écrans */
+      align-items: flex-start; /* Aligne les liens à gauche sur petits écrans */
+    }
+  
+    nav a {
+      margin: 10px 0; /* Plus d'espacement entre les éléments sur petits écrans */
+      width: 100%; /* Les liens occupent toute la largeur */
+      text-align: center; /* Centre le texte des liens */
+    }
+  }
+  
+  /* Styles supplémentaires pour le bouton de bascule de thème */
+  .theme-toggle {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #555;
+  }
+  
+  /* Optionnel : Ajouter des animations au changement de thème */
+  body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  

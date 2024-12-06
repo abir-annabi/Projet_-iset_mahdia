@@ -1,0 +1,190 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Bordure rouge pour champ invalide */
+.invalid {
+    border: 2px solid red;
+  }
+  
+  /* Bordure verte pour champ valide */
+  .valid {
+    border: 2px solid green;
+  }
+  
+  /* Styles pour les champs de formulaire */
+  input {
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* couleur de texte standard */
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #003366; /* bleu foncé pour les titres */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #1E90FF; /* bleu vif pour les liens */
+  }
+  
+  a:hover {
+    color: #003366; /* bleu foncé au survol */
+    text-decoration: underline;
+  }
+  
+  nav {
+    background-color: #003366; /* bleu foncé pour la barre de navigation */
+    padding: 15px;
+    text-align: center;
+  }
+  
+  nav a {
+    margin: 0 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav a.active {
+    color: #FFD700; /* couleur dorée pour l'élément actif */
+  }
+  
+  nav a:hover {
+    color: #FFD700; /* même couleur dorée au survol */
+  }
+  
+  /* Formulaire Inscription */
+  form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  form h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #1E90FF; /* bleu vif pour le bouton */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #003366; /* bleu foncé au survol */
+  }
+  
+  input[type="submit"]:active {
+    background-color: #FFD700; /* couleur dorée pour un clic */
+  }
+  
+  /* Message de bienvenue */
+  .bienvenue-message {
+    text-align: center;
+    font-size: 24px;
+    color: #003366;
+    margin-top: 40px;
+  }
+  
+  .bienvenue-message strong {
+    font-size: 28px;
+    color: #1E90FF; /* bleu vif pour le nom */
+  }
+  
+  /* Style général pour le bouton Valider */
+.button-valider {
+    background-color: #1E90FF; /* Bleu vif pour le fond */
+    color: white; /* Texte en blanc pour contraster avec le fond bleu */
+    font-size: 16px; /* Taille de texte appropriée */
+    padding: 12px 24px; /* Espacement autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Coins arrondis pour un effet plus doux */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation pour le survol et l'agrandissement */
+    font-weight: bold; /* Texte en gras pour une meilleure lisibilité */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet 3D */
+  }
+  
+  /* Effet au survol du bouton */
+  .button-valider:hover {
+    background-color: #FFD700; /* Change la couleur du fond en doré au survol */
+    transform: translateY(-2px); /* Légère élévation pour l'effet de survol */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+  }
+  
+  /* Effet au clic du bouton */
+  .button-valider:active {
+    background-color: #FF6347; /* Couleur rouge au clic */
+    transform: translateY(2px); /* Simule un effet de pression en déplaçant le bouton vers le bas */
+  }
+  
+  /* Style pour les petits écrans */
+  @media (max-width: 768px) {
+    .button-valider {
+      font-size: 14px; /* Réduit la taille de la police sur les petits écrans */
+      padding: 10px 20px; /* Ajuste l'espacement du bouton pour les petits écrans */
+    }
+  }
+
+  /* Style pour les messages d'erreur */
+.error {
+    color: #FF6347; /* Couleur rouge */
+    font-size: 14px; /* Taille de texte plus petite */
+    margin-top: 5px; /* Espace au-dessus des messages */
+  }
+  
+  input.ng-invalid.ng-touched {
+    border-color: #FF6347; /* Bordure rouge pour les champs invalides */
+  }
+  
+  
